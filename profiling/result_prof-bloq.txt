@@ -1,0 +1,74 @@
+Statistical profiling result from bloq-v8.log, (102269 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  77983   76.3%          C:\Windows\SYSTEM32\ntdll.dll
+  24254   23.7%          C:\Program Files\nodejs\node.exe
+      1    0.0%          C:\Windows\System32\WS2_32.dll
+      1    0.0%          C:\Windows\System32\KERNELBASE.dll
+      1    0.0%          C:\Windows\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      4    0.0%   13.8%  Function: ^parseQueryStringValues C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\qs\lib\parse.js:51:50
+      2    0.0%    6.9%  LazyCompile: *resolve node:path:158:10
+      2    0.0%    6.9%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      2    0.0%    6.9%  Function: ^_dump node:_http_incoming:364:49
+      1    0.0%    3.4%  RegExp: ^\/newUser\/?$
+      1    0.0%    3.4%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    3.4%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    3.4%  Function: ^set C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\application.js:359:23
+      1    0.0%    3.4%  Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    3.4%  Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+      1    0.0%    3.4%  Function: ^parseArrayValue C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\qs\lib\parse.js:33:32
+      1    0.0%    3.4%  Function: ^next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\index.js:177:16
+      1    0.0%    3.4%  Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1    0.0%    3.4%  Function: ^etag C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\etag\index.js:70:15
+      1    0.0%    3.4%  Function: ^emit node:events:340:44
+      1    0.0%    3.4%  Function: ^clearTimeout node:timers:184:22
+      1    0.0%    3.4%  Function: ^clearIncoming node:_http_server:749:23
+      1    0.0%    3.4%  Function: ^clearBuffer node:internal/streams/writable:529:21
+      1    0.0%    3.4%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    3.4%  Function: ^Timeout.refresh node:internal/timers:210:37
+      1    0.0%    3.4%  Function: ^Readable.read node:internal/streams/readable:394:35
+      1    0.0%    3.4%  Function: ^Readable node:internal/streams/readable:181:18
+      1    0.0%    3.4%  Function: ^IncomingMessage node:_http_incoming:51:25
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     29    0.0%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     42    0.0%  144.8%  GC
+  102240  100.0%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  77983   76.3%  C:\Windows\SYSTEM32\ntdll.dll
+
+  24254   23.7%  C:\Program Files\nodejs\node.exe
+  24079   99.3%    C:\Program Files\nodejs\node.exe
+  23285   96.7%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  23178   99.5%        Function: ^<anonymous> C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\server.js:60:23
+  23178  100.0%          Function: ^handle C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\layer.js:86:49
+  22902   98.8%            Function: ^next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\route.js:116:16
+    276    1.2%            LazyCompile: ~next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\route.js:116:16
+    467    1.9%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+    435   93.1%        LazyCompile: ~<anonymous> C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\server.js:60:23
+    323   74.3%          Function: ^handle C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\layer.js:86:49
+    323  100.0%            LazyCompile: ~next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\route.js:116:16
+    112   25.7%          LazyCompile: ~handle C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\layer.js:86:49
+    112  100.0%            LazyCompile: ~next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\route.js:116:16
+     32    6.9%        LazyCompile: ~<anonymous> C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\server.js:42:21
+     32  100.0%          LazyCompile: ~handle C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\layer.js:86:49
+     32  100.0%            LazyCompile: ~next C:\programacion_backend28220\Clases\Clase-32\ejemplos\profiling\node_modules\express\lib\router\route.js:116:16
+
